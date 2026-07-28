@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chiamaka — Frontend Developer Portfolio. Building clean, responsive UIs with React, Tailwind CSS, and JavaScript." />
+  <title>Chiamaka | Frontend Developer</title>
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Phosphor — lightweight, modern) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+     <!-- NAVIGATION -->
+    
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">C<span>.</span>dev</a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+      <!-- CV Download — replace href with your actual CV file -->
+      <a class="btn btn-primary btn-sm" href="assets/Chiamaka_CV.pdf" download aria-label="Download CV">
+        <i class="ph ph-download-simple"></i> Download CV
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-primary" href="assets/Chiamaka_CV.pdf" download>Download CV</a>
+</div>
+
+<!-- ============================
+     HERO SECTION
+     ============================ -->
+<section id="hero">
+  <!-- Decorative bg -->
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
+  <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        Available
+      </div>
+
+      <h1 class="hero-name">
+        Hi, I'm <span style="color:var(--accent-indigo)">Chiamaka</span> 👋
+      </h1>
+
+      <p class="hero-role">
+        I'm a&nbsp;<span id="typedText" class="typed-text">Frontend Developer</span>
+      </p>
+
+      <p class="hero-bio">
+        I build beautiful, responsive web experiences that users love —
+        turning creative ideas into clean, performant code.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="ph ph-layout"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="ph ph-paper-plane-tilt"></i> Contact Me
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+
+<!-- ============================
+     ABOUT SECTION
+     ============================ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Visual -->
+      <div class="about-visual reveal-left">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-bg"></div>
+          <div class="about-avatar">
+            <!--
+              TO ADD YOUR PHOTO:
+              Replace the emoji below with:
+              <img src="images/profile.jpg" alt="Chiamaka — Frontend Developer" />
+            -->
+            <span class="about-avatar-placeholder">👩🏾‍💻</span>
+          </div>
+
+          <!-- Floating stat cards -->
+          <div class="about-stat about-stat-1">
+            <div class="about-stat-icon">🚀</div>
+            <div>
+              <div class="about-stat-value">4+</div>
+              <div class="about-stat-label">Projects shipped</div>
+            </div>
+          </div>
+
+          <div class="about-stat about-stat-2">
+            <div class="about-stat-icon">💡</div>
+            <div>
+              <div class="about-stat-value">8+</div>
+              <div class="about-stat-label">Skills mastered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal-right">
+        <p class="section-eyebrow">About Me</p>
+        <h2 class="section-title">
+          Passionate about<br /><span>building great UIs</span>
+        </h2>
+        <p style="margin-bottom:1.25rem; line-height:1.8;">
+          I'm a self-driven frontend developer
+          with a love for building interfaces that feel as good as they look.
+          My journey started with curiosity — a single "Hello, World!" that
+          sparked something I couldn't stop.
+        </p>
+        <p style="line-height:1.8;">
+          Today I build responsive, accessible, and polished website using
+          modern tools like React and Tailwind CSS. I'm actively seeking
+          internships and junior frontend roles where I can grow fast, ship
+          real products, and collaborate with a great team.
+        </p>
+
+        <div class="about-tags">
+          <span class="about-tag">⚡ React</span>
+          <span class="about-tag">🎨 CSS / Tailwind</span>
+          <span class="about-tag">🧠 JavaScript</span>
+          <span class="about-tag">🔧 Git & GitHub</span>
+          <span class="about-tag">📱 Responsive Design</span>
+          <span class="about-tag">♿ Accessibility</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <div class="container">
+    <p class="section-eyebrow reveal">Skills</p>
+    <h2 class="section-title reveal reveal-delay-1">My Tech <span>Stack</span></h2>
+    <p class="section-sub reveal reveal-delay-2">
+      Hover (or tap) a card to see my proficiency level.
+    </p>
+
+    <div class="skills-grid">
+
+      <!-- SKILL CARD TEMPLATE:
+           Copy one block to add a new skill.
+           Icons from: https://phosphoricons.com / use emoji as fallback
+      -->
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">🌐</span>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Advanced</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:92%"></div></div>
+            <p>Semantic markup</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">🎨</span>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Advanced</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:88%"></div></div>
+            <p>Flexbox · Grid · Animations</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">⚡</span>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Proficient</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <p>ES6+ · DOM · APIs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">⚛️</span>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Proficient</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:75%"></div></div>
+            <p>Hooks · Components · Router</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">💨</span>
+            <span class="skill-name">Tailwind CSS</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Proficient</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:82%"></div></div>
+            <p>Utility-first CSS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">🅱️</span>
+            <span class="skill-name">Bootstrap</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Comfortable</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:70%"></div></div>
+            <p>Grid · Components</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">🌿</span>
+            <span class="skill-name">Git</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Comfortable</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:72%"></div></div>
+            <p>Branching · Merge · Rebase</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-inner">
+          <div class="skill-front">
+            <span class="skill-icon">🐙</span>
+            <span class="skill-name">GitHub</span>
+          </div>
+          <div class="skill-back">
+            <span class="skill-level">Comfortable</span>
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:74%"></div></div>
+            <p>PRs · Issues · Actions</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     PROJECTS SECTION
+     ============================ -->
+<section id="projects">
+  <div class="container">
+    <p class="section-eyebrow reveal">Portfolio</p>
+    <h2 class="section-title reveal reveal-delay-1">Featured <span>Projects</span></h2>
+    <p class="section-sub reveal reveal-delay-2">
+      A selection of projects I've built — each one a chance to solve a real problem
+      with clean code and thoughtful design.
+    </p>
+
+    <!-- Filters -->
+    <div class="project-filters reveal reveal-delay-3">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="css">CSS</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+
+      <!--
+        HOW TO ADD A NEW PROJECT:
+        Copy one .project-card block.
+        Set data-tags to include the filter keywords (react, javascript, css).
+        Replace gradient/emoji in .project-img-placeholder (or add a real <img>).
+        Update title, description, stack badges, and links.
+      -->
+
+      <!-- Project 1: MoviePick -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="javascript css">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/moviepick.png" alt="MoviePick App Screenshot" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">MoviePick</h3>
+          <p class="project-desc">
+            A movie discovery app that lets users search, filter by genre,
+            and explore trending films — powered by the TMDB API with a
+            clean dark UI and Supabase authentication.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">JavaScript</span>
+            <span class="stack-badge">TMDB API</span>
+            <span class="stack-badge">Supabase</span>
+            <span class="stack-badge">CSS3</span>
+          </div>
+          <div class="project-links">
+            <a href="mharkie-salon.vercel.app " class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Mharkie Salon -->
+      <article class="project-card reveal reveal-delay-2"
+               data-tags="react css">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/salon.png" alt="Mharkie Salon Screenshot" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Mharkie Salon</h3>
+          <p class="project-desc">
+            A luxury multi-page salon website built in React with a deep
+            burgundy aesthetic, fully responsive across all devices, with
+            animated sections, booking form, and Nigerian pricing.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">CSS3</span>
+            <span class="stack-badge">React Router</span>
+            <span class="stack-badge">Responsive</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Quiz Master App -->
+      <article class="project-card reveal reveal-delay-3"
+               data-tags="javascript css">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/quiz.png" alt="Quiz Master App Screenshot" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Quiz Master App</h3>
+          <p class="project-desc">
+            A feature-rich quiz application with 225 built-in questions across
+            4 categories and 3 difficulty levels. Includes a countdown timer,
+            dark mode, and localStorage-powered high scores.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">JavaScript</span>
+            <span class="stack-badge">HTML5</span>
+            <span class="stack-badge">CSS3</span>
+            <span class="stack-badge">localStorage</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Planet Explorer -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="react javascript">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/tailwind.png" alt="tailwind exercise" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Planet Explorer</h3>
+          <p class="project-desc">
+            A group capstone project — an interactive planets encyclopedia
+            built in React, consuming a custom Planets API. I built the
+            PlanetsGrid component and managed the team GitHub workflow.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">REST API</span>
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">GitHub</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Planet Explorer -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="react javascript">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/Screenshot 2026-03-06 212600.png" alt="tailwind exercise" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Planet Explorer</h3>
+          <p class="project-desc">
+            A group capstone project — an interactive planets encyclopedia
+            built in React, consuming a custom Planets API. I built the
+            PlanetsGrid component and managed the team GitHub workflow.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">REST API</span>
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">GitHub</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Planet Explorer -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="react javascript">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/Screenshot 2026-03-06 212745.png" alt="tailwind exercise" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Planet Explorer</h3>
+          <p class="project-desc">
+            A group capstone project — an interactive planets encyclopedia
+            built in React, consuming a custom Planets API. I built the
+            PlanetsGrid component and managed the team GitHub workflow.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">REST API</span>
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">GitHub</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Planet Explorer -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="react javascript">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/Screenshot 2026-07-14 161706.png"  alt="tailwind exercise" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Planet Explorer</h3>
+          <p class="project-desc">
+            A group capstone project — an interactive planets encyclopedia
+            built in React, consuming a custom Planets API. I built the
+            PlanetsGrid component and managed the team GitHub workflow.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">REST API</span>
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">GitHub</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Planet Explorer -->
+      <article class="project-card reveal reveal-delay-1"
+               data-tags="react javascript">
+        <div class="project-img">
+          <div>
+            <img src="assets/images/Screenshot 2026-03-06 212745.png" alt="tailwind exercise" />
+          </div>
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Planet Explorer</h3>
+          <p class="project-desc">
+            A group capstone project — an interactive planets encyclopedia
+            built in React, consuming a custom Planets API. I built the
+            PlanetsGrid component and managed the team GitHub workflow.
+          </p>
+          <div class="project-stack">
+            <span class="stack-badge">React</span>
+            <span class="stack-badge">REST API</span>
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">GitHub</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-arrow-square-out"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     CONTACT SECTION
+     ============================ -->
+<section id="contact">
+  <div class="container">
+    <p class="section-eyebrow reveal">Contact</p>
+    <h2 class="section-title reveal reveal-delay-1">Let's <span>Work Together</span></h2>
+    <p class="section-sub reveal reveal-delay-2">
+      I'm open to internships, junior roles, freelance projects, and collaborations.
+      Don't hesitate to reach out — I'd love to hear from you.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- Contact links -->
+      <div class="contact-info reveal-left">
+
+        <!-- Replace with your actual email -->
+        <a class="contact-link-card" href="mailto:chiamaka@example.com">
+          <div class="contact-link-icon">📧</div>
+          <div>
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">diarachiamaka28@gmail.com</div>
+          </div>
+        </a>
+
+        <!-- Replace with your LinkedIn URL -->
+        <a class="contact-link-card" href="https://www.linkedin.com/in/chiamaka-diara-4a3313392?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+           target="_blank" rel="noopener">
+          <div class="contact-link-icon">💼</div>
+          <div>
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">Chiamaka Diara</div>
+          </div>
+        </a>
+
+        <!-- Replace with your GitHub URL -->
+      
+
+        <!-- Optional: Twitter/X -->
+        <a class="contact-link-card" href="https://twitter.com/your-handle"
+           target="_blank" rel="noopener">
+          <div class="contact-link-icon">🐦</div>
+          <div>
+            <div class="contact-link-label">Twitter / X</div>
+            <div class="contact-link-value">@your-handle</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Contact form -->
+      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">First Name</label>
+            <input class="form-input" id="fname" type="text"
+                   placeholder="Ada" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lname">Last Name</label>
+            <input class="form-input" id="lname" type="text"
+                   placeholder="Okonkwo" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="femail">Email Address</label>
+          <input class="form-input" id="femail" type="email"
+                 placeholder="ada@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="fsubject">Subject</label>
+          <input class="form-input" id="fsubject" type="text"
+                 placeholder="Let's work together!" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="fmessage">Message</label>
+          <textarea class="form-textarea" id="fmessage"
+                    placeholder="Tell me about your project or opportunity…"
+                    required></textarea>
+        </div>
+
+        <div class="form-status" id="formStatus" role="alert"></div>
+
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start">
+          <i class="ph ph-paper-plane-tilt"></i> Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     FOOTER
+     ============================ -->
+<footer id="footer">
+  <div class="container footer-inner">
+
+    <p class="footer-copy">
+      © <span id="year"></span> Chiamaka. Crafted with <span>♥</span>
+    </p>
+
+    <div class="footer-links">
+      <a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="ph ph-github-logo"></i>
+      </a>
+      <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="ph ph-linkedin-logo"></i>
+      </a>
+      <a href="mailto:chiamaka@example.com" aria-label="Email">
+        <i class="ph ph-envelope-simple"></i>
+      </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="ph ph-arrow-up"></i>
+    </button>
+
+  </div>
+</footer>
+
+
+<!-- ─── Scripts ─── -->
+<script>
+  /* Inline year so it always stays current */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
