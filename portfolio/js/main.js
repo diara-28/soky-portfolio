@@ -17,7 +17,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   window.addEventListener('scroll', () => {
     /* Sticky glass */
-    // navbar.classList.toggle('scrolled', window.scrollY > 50);
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
 
     /* Active link */
     let current = '';
@@ -71,7 +71,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   });
 
   function updateIcon(isLight) {
-    icon.textContent = isLight ? '🌙' : '☀️';
+    icon.className = isLight ? 'ph ph-moon' : 'ph ph-sun';
   }
 })();
 
@@ -156,14 +156,14 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
     /* Loading state */
     btn.disabled = true;
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Sending...';
 
     /* Simulate async send */
     await new Promise(r => setTimeout(r, 1500));
 
     /* Swap to success */
     status.className = 'form-status success';
-    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+    status.textContent = 'Message received. I will get back to you soon.';
     form.reset();
     btn.textContent = 'Send Message';
     btn.disabled = false;
@@ -207,9 +207,7 @@ document.addEventListener('click', e => {
   });
 })();
 
-/* ============================================================
-   11. CURSOR GLOW on hero (desktop only)
-   ============================================================ */
+/*11. CURSOR GLOW on hero (desktop only)*/
 (function initCursorGlow() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
   const hero = $('#hero');
