@@ -4,33 +4,33 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Palette */
-  --bg-primary:    #102820;
-  --bg-secondary:  #16352B;
-  --bg-card:       #1D4034;
-  --bg-card-hover: #275142;
-  --accent-indigo: #5EAE83;
-  --accent-violet: #8AC49B;
-  --accent-rose:   #C6DB9A;
-  --text-primary:  #F3F8EF;
-  --text-secondary:#C4D3C4;
-  --text-muted:    #89A494;
-  --border:        rgba(94,174,131,0.25);
-  --border-hover:  rgba(198,219,154,0.64);
-  --glow:          rgba(94,174,131,0.25);
+  --bg-primary:    #21191B;
+  --bg-secondary:  #2C2022;
+  --bg-card:       #38282A;
+  --bg-card-hover: #493033;
+  --accent-indigo: #B85C5F;
+  --accent-violet: #D08A68;
+  --accent-rose:   #E1A16F;
+  --text-primary:  #FAF3EC;
+  --text-secondary:#D8C9C1;
+  --text-muted:    #A9948D;
+  --border:        rgba(184,92,95,0.28);
+  --border-hover:  rgba(225,161,111,0.68);
+  --glow:          rgba(184,92,95,0.24);
 
   /* Light mode */
-  --lm-bg-primary:    #F4F8F1;
-  --lm-bg-secondary:  #E4EEE0;
+  --lm-bg-primary:    #F8F3EE;
+  --lm-bg-secondary:  #EFE4DE;
   --lm-bg-card:       #FFFFFF;
-  --lm-bg-card-hover: #EDF5E8;
-  --lm-accent-indigo: #26704D;
-  --lm-accent-rose:   #617D3D;
-  --lm-text-primary:  #16352B;
-  --lm-text-secondary:#4E695A;
-  --lm-text-muted:    #7C9686;
-  --lm-border:        rgba(38,112,77,0.18);
-  --lm-border-hover:  rgba(38,112,77,0.52);
-  --lm-glow:          rgba(38,112,77,0.14);
+  --lm-bg-card-hover: #F6E9E1;
+  --lm-accent-indigo: #7D2638;
+  --lm-accent-rose:   #B45F45;
+  --lm-text-primary:  #302124;
+  --lm-text-secondary:#634F4C;
+  --lm-text-muted:    #927B74;
+  --lm-border:        rgba(125,38,56,0.18);
+  --lm-border-hover:  rgba(180,95,69,0.56);
+  --lm-glow:          rgba(125,38,56,0.14);
 
   /* Typography */
   --font-display: 'Space Grotesk', sans-serif;
@@ -209,7 +209,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 
 #navbar.scrolled {
-  background: rgba(10, 15, 30, 0.92);
+  background: rgba(33, 25, 27, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -217,7 +217,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 
 body.light #navbar.scrolled {
-  background: rgba(248, 250, 255, 0.92);
+  background: rgba(248, 243, 238, 0.92);
 }
 
 .nav-inner {
@@ -382,8 +382,8 @@ body.light #navbar.scrolled {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(94,174,131,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(94,174,131,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(184,92,95,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,92,95,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
 }
@@ -394,7 +394,7 @@ body.light #navbar.scrolled {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(94,174,131,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(184,92,95,0.2) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -433,7 +433,7 @@ body.light #navbar.scrolled {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22C55E;
+  background: var(--accent-rose);
   animation: blink 2s ease-in-out infinite;
 }
 
@@ -524,7 +524,7 @@ body.light #navbar.scrolled {
 .hero-shape-1 {
   width: 350px;
   height: 350px;
-  background: rgba(94,174,131,0.14);
+  background: rgba(184,92,95,0.14);
   top: 10%;
   right: -5%;
   animation: float 6s ease-in-out infinite;
@@ -605,13 +605,62 @@ body.light #navbar.scrolled {
   object-fit: cover;
 }
 
-.about-avatar-placeholder {
+.about-profile-card {
+  width: 100%;
+  height: 100%;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, rgba(125,38,56,0.3), rgba(208,138,104,0.08));
+}
+
+.about-profile-mark {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid var(--border-hover);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--accent-rose);
   font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 7rem);
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: -0.08em;
-  color: var(--accent-indigo);
-  opacity: 0.55;
+  letter-spacing: -0.06em;
+}
+
+.about-profile-kicker {
+  color: var(--accent-rose);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-profile-card h3 {
+  color: var(--text-primary);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.12;
+}
+
+.about-profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+}
+
+.about-profile-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.about-profile-meta i {
+  color: var(--accent-rose);
 }
 
 /* Stats floating cards */
@@ -692,7 +741,7 @@ body.light #navbar.scrolled {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
@@ -727,6 +776,8 @@ body.light #navbar.scrolled {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  padding: 0 0.75rem;
+  text-align: center;
   border: 1px solid var(--border);
 }
 
@@ -756,6 +807,7 @@ body.light #navbar.scrolled {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
+  max-width: 100%;
 }
 
 .skill-back .skill-level {
@@ -891,7 +943,7 @@ body.light #navbar.scrolled {
 .project-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(16,40,32,0.76) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(33,25,27,0.76) 0%, transparent 60%);
   opacity: 0;
   transition: opacity var(--dur-mid);
 }
@@ -943,7 +995,7 @@ body.light #navbar.scrolled {
 }
 
 .project-card:hover .stack-badge {
-  border-color: rgba(94,174,131,0.42);
+  border-color: rgba(184,92,95,0.42);
   color: var(--accent-indigo);
 }
 
@@ -1093,9 +1145,9 @@ body.light #navbar.scrolled {
 
 .form-status.success {
   display: block;
-  background: rgba(34,197,94,0.1);
-  border: 1px solid rgba(34,197,94,0.3);
-  color: #22C55E;
+  background: rgba(225,161,111,0.1);
+  border: 1px solid rgba(225,161,111,0.3);
+  color: var(--accent-rose);
 }
 
 .form-status.error {
@@ -1244,7 +1296,7 @@ body.light #navbar.scrolled {
 
   .projects-grid { grid-template-columns: 1fr; }
 
-  .skills-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
   .form-row { grid-template-columns: 1fr; }
 
@@ -1259,6 +1311,8 @@ body.light #navbar.scrolled {
   html { font-size: 16px; }
   :root { --section-pad: 4rem; }
   .nav-inner { gap: 0.75rem; }
+
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-logo { font-size: 1.2rem; }
   .hero-cta .btn { width: 100%; justify-content: center; }
   .project-body { padding: 1.25rem; }

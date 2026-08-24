@@ -81,7 +81,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 (function initTyped() {
   const el    = $('#typedText');
   if (!el) return;
-  const words = ['Frontend Developer', 'Problem Solver', 'Creative Coder'];
+  const words = ['Software QA Engineer', 'Manual QA Engineer', 'Automation Engineer'];
   let wi = 0, ci = 0, deleting = false;
 
   function tick() {
@@ -143,32 +143,38 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 })();
 
 /* ============================================================
-   7. CONTACT FORM  (simulated submission)
+   7. CONTACT FORM  (WhatsApp submission)
    ============================================================ */
 (function initForm() {
   const form   = $('#contactForm');
   const status = $('#formStatus');
   if (!form) return;
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
 
-    /* Loading state */
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-    /* Simulate async send */
-    await new Promise(r => setTimeout(r, 1500));
+    const firstName = $('#fname').value.trim();
+    const lastName  = $('#lname').value.trim();
+    const email     = $('#femail').value.trim();
+    const subject   = $('#fsubject').value.trim();
+    const message   = $('#fmessage').value.trim();
+    const whatsappMessage = [
+      `Hello Sochy, my name is ${firstName} ${lastName}.`,
+      `Email: ${email}`,
+      `Subject: ${subject}`,
+      '',
+      message
+    ].join('\n');
 
-    /* Swap to success */
+    const whatsappUrl = `https://wa.me/2349038147604?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank', 'noopener');
     status.className = 'form-status success';
-    status.textContent = 'Message received. I will get back to you soon.';
-    form.reset();
-    btn.textContent = 'Send Message';
-    btn.disabled = false;
-
-    setTimeout(() => { status.className = 'form-status'; }, 6000);
+    status.textContent = 'Opening WhatsApp with your message...';
   });
 })();
 
