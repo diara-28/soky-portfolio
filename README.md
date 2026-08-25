@@ -14,7 +14,7 @@ portfolio/
 ├── images/
 │   └── profile.jpg     ← Add your photo here
 └── assets/
-    └── Sochy_CV.pdf ← Add your CV here
+    └──Diara Sochy_CV.pdf ← Add your CV here
 ```
 
 ## ✏️ How to Customize
@@ -29,7 +29,7 @@ portfolio/
 
 ### Add your CV
 
-1. Place your CV as `assets/Sochy_CV.pdf`
+1. Place your CV as `assets/Diara Sochy_CV.pdf`
 2. The "Download CV" button will work automatically.
 
 ### Update contact links

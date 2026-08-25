@@ -4,33 +4,33 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Palette */
-  --bg-primary:    #21191B;
-  --bg-secondary:  #2C2022;
-  --bg-card:       #38282A;
-  --bg-card-hover: #493033;
-  --accent-indigo: #B85C5F;
-  --accent-violet: #D08A68;
-  --accent-rose:   #E1A16F;
-  --text-primary:  #FAF3EC;
-  --text-secondary:#D8C9C1;
-  --text-muted:    #A9948D;
-  --border:        rgba(184,92,95,0.28);
-  --border-hover:  rgba(225,161,111,0.68);
-  --glow:          rgba(184,92,95,0.24);
+  --bg-primary:    #171321;
+  --bg-secondary:  #211a31;
+  --bg-card:       #2b2140;
+  --bg-card-hover: #3b2a59;
+  --accent-indigo: #a879ff;
+  --accent-violet: #d18cff;
+  --accent-rose:   #ff9ed2;
+  --text-primary:  #f8f2ff;
+  --text-secondary:#d8cbea;
+  --text-muted:    #a99bbd;
+  --border:        rgba(168,121,255,0.28);
+  --border-hover:  rgba(255,158,210,0.68);
+  --glow:          rgba(168,121,255,0.24);
 
   /* Light mode */
-  --lm-bg-primary:    #F8F3EE;
-  --lm-bg-secondary:  #EFE4DE;
-  --lm-bg-card:       #FFFFFF;
-  --lm-bg-card-hover: #F6E9E1;
-  --lm-accent-indigo: #7D2638;
-  --lm-accent-rose:   #B45F45;
-  --lm-text-primary:  #302124;
-  --lm-text-secondary:#634F4C;
-  --lm-text-muted:    #927B74;
-  --lm-border:        rgba(125,38,56,0.18);
-  --lm-border-hover:  rgba(180,95,69,0.56);
-  --lm-glow:          rgba(125,38,56,0.14);
+  --lm-bg-primary:    #f7f3ff;
+  --lm-bg-secondary:  #eee7fb;
+  --lm-bg-card:       #ffffff;
+  --lm-bg-card-hover: #f3eaff;
+  --lm-accent-indigo: #7040b8;
+  --lm-accent-rose:   #b83f82;
+  --lm-text-primary:  #241a35;
+  --lm-text-secondary:#5f5272;
+  --lm-text-muted:    #8d7da1;
+  --lm-border:        rgba(112,64,184,0.18);
+  --lm-border-hover:  rgba(184,63,130,0.56);
+  --lm-glow:          rgba(112,64,184,0.14);
 
   /* Typography */
   --font-display: 'Space Grotesk', sans-serif;
@@ -209,7 +209,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 
 #navbar.scrolled {
-  background: rgba(33, 25, 27, 0.92);
+  background: rgba(23, 19, 33, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -217,7 +217,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 
 body.light #navbar.scrolled {
-  background: rgba(248, 243, 238, 0.92);
+  background: rgba(247, 243, 255, 0.92);
 }
 
 .nav-inner {
@@ -382,8 +382,8 @@ body.light #navbar.scrolled {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(184,92,95,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(184,92,95,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(168,121,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168,121,255,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
 }
@@ -394,7 +394,7 @@ body.light #navbar.scrolled {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(184,92,95,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168,121,255,0.2) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -524,7 +524,7 @@ body.light #navbar.scrolled {
 .hero-shape-1 {
   width: 350px;
   height: 350px;
-  background: rgba(184,92,95,0.14);
+  background: rgba(168,121,255,0.14);
   top: 10%;
   right: -5%;
   animation: float 6s ease-in-out infinite;
@@ -612,7 +612,7 @@ body.light #navbar.scrolled {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(145deg, rgba(125,38,56,0.3), rgba(208,138,104,0.08));
+  background: linear-gradient(145deg, rgba(112,64,184,0.3), rgba(209,140,255,0.08));
 }
 
 .about-profile-mark {
@@ -995,7 +995,7 @@ body.light #navbar.scrolled {
 }
 
 .project-card:hover .stack-badge {
-  border-color: rgba(184,92,95,0.42);
+  border-color: rgba(168,121,255,0.42);
   color: var(--accent-indigo);
 }
 
@@ -1145,8 +1145,8 @@ body.light #navbar.scrolled {
 
 .form-status.success {
   display: block;
-  background: rgba(225,161,111,0.1);
-  border: 1px solid rgba(225,161,111,0.3);
+  background: rgba(255,158,210,0.1);
+  border: 1px solid rgba(255,158,210,0.3);
   color: var(--accent-rose);
 }
 
