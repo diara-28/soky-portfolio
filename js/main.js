@@ -81,7 +81,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 (function initTyped() {
   const el    = $('#typedText');
   if (!el) return;
-  const words = ['Software QA Engineer', 'Manual QA Engineer', 'Automation Engineer'];
+  const words = ['Software QA Engineer', 'I Uncover Defects And Validate Software Functionality', 'I Help Teams Deliver Reliable And User Friendly Software'];
   let wi = 0, ci = 0, deleting = false;
 
   function tick() {
